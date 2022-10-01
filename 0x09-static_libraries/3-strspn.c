@@ -1,9 +1,9 @@
 #include "main.h"
+
 /**
- * _strspn - gets the length of a function prefix substring
- * @s: Initial segment to be scanned
- * @accept: character to be found
- *
+ * _strspn - gets the length of a prefix substring.
+ * @s: string.
+ * @accept: character
  * Return: number of characters in @s which consist of @accept
  */
 

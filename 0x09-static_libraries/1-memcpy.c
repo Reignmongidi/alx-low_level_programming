@@ -1,31 +1,19 @@
 #include "main.h"
 
 /**
- * _strcat - concatenates two strings
- * Description: joins two strings
- * @dest: destination value
- * @src: source value
- * Return: 0
- */
+ * _memcpy - copies memory area.
+ * @dest: destination
+ * @src: source
+ * @n: unsigned integer.
+ * Return: Src.
+ **/
 
-char *_strcat(char *dest, char *src)
+char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	int i, j;
+	unsigned int a;
 
-	i = 0;
-
-	while (dest[i] != '\0')
-	{
-		i++;
-	}
-	j = 0;
-	while (src[j] != '\0')
-	{
-		dest[i] = src[j];
-		i++;
-		j++;
-	}
-	dest[i] = '\0';
+	for (a = 0; a < n; a++)
+		dest[a] = src[a];
 
 	return (dest);
 }

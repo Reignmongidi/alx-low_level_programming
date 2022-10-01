@@ -1,21 +1,27 @@
-#include "main.h"
-/**
- * _strpbrk - searches a string for any of a set of bytes.
- * @s: char to check
- * @accept: char to look for
- * Return: char
- */
-char *_strpbrk(char *s, char *accept)
-{
-	int i, k;
+#include"main.h"
 
-	for (i = 0; s[i] != '\0'; i++)
+/**
+ * _strstr - locating a substring
+ * @needle: occurance to find
+ * @haystack: string to search
+ * Return: pointer
+ */
+
+char *_strstr(char *haystack, char *needle)
+{
+	while (*haystack)
 	{
-		for (k = 0; accept[k] != '\0'; k++)
+		char *src = haystack;
+		char *sub = needle;
+
+		while (*haystack && *sub && *haystack == *sub)
 		{
-			if (s[i] == accept[k])
-				return (s + i);
+			haystack++;
+			sub++;
 		}
+		if (!*sub)
+			return (src);
+		haystack = src + 1;
 	}
 	return (0);
 }

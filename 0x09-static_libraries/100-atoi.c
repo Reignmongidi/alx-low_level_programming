@@ -1,10 +1,12 @@
 #include "main.h"
+#include "2-strlen.c"
 
 /**
- * _atoi - Convert a string to integer.
- * @s: char array string
- * Return: first integer found in string
+ * _atoi - converts string to integer.
+ * @s: String to convert.
+ * Return: Returns integer.
  */
+
 int _atoi(char *s)
 {
 	int i;

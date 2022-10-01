@@ -1,17 +1,16 @@
 #include "main.h"
-/**
- *  * _strlen - find the length of a string
- *   * @s: pointer to the string to check
- *    * Return: void
- */
 
+/**
+ * _strlen - gets character string.
+ * @s: Character to get string.
+ * Return: Returns length of string.
+ **/
 
 int _strlen(char *s)
 {
-	int i = 0;
+	int a;
 
-	while (s[i])
-		i++;
-
-	return (i);
+	for (a = 0; s[a] != '\0'; a++)
+	{}
+	return (a);
 }
